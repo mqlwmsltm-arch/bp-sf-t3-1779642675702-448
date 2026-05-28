@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta name="description" content="마포 셔츠룸 정보 페이지 - 프록시 보안 셔츠 대여의 모든 것. 위치, 이용방법, 보안 시스템 상세 안내. 전화 010-6279-0862">
+    <meta name="keywords" content="마포 셔츠룸 정보, 마포 프록시 보안 정보, 셔츠 대여 마포 정보, 프록시 셔츠 정보, 마포 보안 셔츠 안내, 셔츠룸 프록시 정보, 마포 셔츠 대여 방법, 프록시 보안 셔츠룸 이용">
+    <link rel="canonical" href="https://sf-t3-1779642675702-448.pages.dev/info">
+    <meta property="og:title" content="마포 셔츠룸 | 정보 - 프록시 보안 셔츠 대여">
+    <meta property="og:description" content="마포 셔츠룸 정보 페이지. 보안 셔츠 대여 이용방법, 보안 시스템, 자주 묻는 질문까지. 전화 010-6279-0862">
+    <meta property="og:url" content="https://sf-t3-1779642675702-448.pages.dev/info">
+    <meta name="robots" content="index, follow">
+    <title>마포 셔츠룸 | 정보 - 프록시 보안 셔츠 대여</title>
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'Courier New', 'Nanum Gothic', monospace, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        a {
+            color: #ff3366;
+            text-decoration: none;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+        a:hover {
+            color: #ff6699;
+            text-shadow: 0 0 8px rgba(255, 51, 102, 0.5);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* BRUTAL SYSTEM */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+        h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            background: linear-gradient(135deg, #ff3366, #ff6699);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: #ff3366;
+            border-left: 6px solid #ff3366;
+            padding-left: 1rem;
+            margin: 2rem 0 1rem;
+        }
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #ff6699;
+            margin: 1.5rem 0 0.75rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #b0b0b0;
+            max-width: 70ch;
+        }
+        /* LAYOUT */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            position: relative;
+            padding: 4rem 0;
+            border-bottom: 2px solid #1a1a2e;
+        }
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 40px,
+                rgba(255, 51, 102, 0.03) 40px,
+                rgba(255, 51, 102, 0.03) 41px
+            );
+            pointer-events: none;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        /* NAVIGATION */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #1a1a2e;
+            z-index: 1000;
+            padding: 0.75rem 0;
+        }
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ff3366;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #888;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff3366;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: #ff3366;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 15, 0.98);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 2px solid #1a1a2e;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        .tel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ff3366;
+            color: #0a0a0f !important;
+            padding: 0.5rem 1.2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 2px solid #ff3366;
+            transition: background 0.2s, color 0.2s;
+            margin-top: 1rem;
+        }
+        .tel-link:hover {
+            background: #0a0a0f;
+            color: #ff3366 !important;
+            text-shadow: none;
+        }
+        /* HERO */
+        .hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+        .hero p {
+            margin: 1rem auto 1.5rem;
+            font-size: 1.1rem;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #1a1a2e;
+            border: 1px solid #ff3366;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            color: #ff6699;
+        }
+        /* INFO GRID */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .info-card {
+            background: #11111a;
+            border: 1px solid #1a1a2e;
+            padding: 2rem;
+            position: relative;
+            transition: border-color 0.3s;
+        }
+        .info-card:hover {
+            border-color: #ff3366;
+        }
+        .info-card h3 {
+            margin-top: 0;
+        }
+        .info-card p {
+            font-size: 0.95rem;
+        }
+        .info-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        /* FAQ */
+        .faq-item {
+            background: #11111a;
+            border: 1px solid #1a1a2e;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .faq-item h4 {
+            font-size: 1.1rem;
+            color: #ff6699;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item h4::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #ff3366;
+        }
+        .faq-item p {
+            margin: 0.5rem 0 0;
+        }
+        /* TABLE */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        .info-table th,
+        .info-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #1a1a2e;
+        }
+        .info-table th {
+            background: #1a1a2e;
+            color: #ff6699;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        .info-table td {
+            color: #b0b0b0;
+        }
+        /* FOOTER */
+        footer {
+            background: #0a0a0f;
+            border-top: 2px solid #1a1a2e;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        footer a {
+            color: #888;
+        }
+        footer a:hover {
+            color: #ff3366;
+        }
+        /* UTILITIES */
+        .text-center { text-align: center; }
+        .mt-2 { margin-top: 2rem; }
+        .mb-1 { margin-bottom: 1rem; }
+        .highlight {
+            color: #ff3366;
+            font-weight: 700;
+        }
+        .note {
+            background: #1a1a2e;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #ff3366;
+            font-style: italic;
+            margin: 1.5rem 0;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-logo">마포셔츠룸</div>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/info" class="active">정보</a></li>
+                <li><a href="/services">서비스</a></li>
+                <li><a href="/contact">문의</a></li>
+                <li><a href="tel:01062790862" style="color:#ff3366;font-weight:700;">010-6279-0862</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container text-center">
+                <span class="badge">마포 No.1 · 프록시 보안 셔츠 대여</span>
+                <h1>마포 셔츠룸<br>정보 한눈에</h1>
+                <p>보안 셔츠 대여, 이렇게 쉬웠나 싶을 걸요.<br>마포에서 프록시 보안 셔츠 빌리는 법, 위치, 시스템까지 싹 다 정리했어요.</p>
+                <a href="tel:01062790862" class="tel-link">📞 010-6279-0862 바로 전화</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>📍 마포 셔츠룸 · 위치 & 오시는 길</h2>
+                <p>마포구 홍대입구역에서 도보 5분 거리, 골목 안쪽에 있어요. 네비 찍고 오면 바로 보여요. 주차는 근처 공영주차장 이용하시면 편하고요, 저희가 할인권도 챙겨드려요.</p>
+                <p><span class="highlight">주소</span> 서울 마포구 와우산로 29길 12-8, 2층<br>
+                <span class="highlight">영업시간</span> 매일 11:00 ~ 02:00 (연중무휴)<br>
+                <span class="highlight">연락처</span> <a href="tel:01062790862">010-6279-0862</a></p>
+                <div class="note">
+                    팁! 언니가 알려주는 꿀팁 – 홍대입구역 1번 출구로 나와서 직진하다 보면 편의점에서 좌회전하면 바로 보여요. 밤에도 간판 환하니까 놓칠 일 없어요.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>🛡️ 프록시 보안 시스템 · 이렇게 작동해요</h2>
+                <p>셔츠 하나 빌리는 게 왜 보안이고 프록시냐고요? 사실 우리가 입는 옷 자체가 익명성을 만들어주는 거예요. 마포 셔츠룸의 셔츠는 <span class="highlight">물리적 프록시</span>예요. 셔츠를 입으면 누구나 똑같이 보여서 개인 식별 자체가 어려워져요.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <span class="icon">👕</span>
+                        <h3>셔츠 대여</h3>
+                        <p>하루 종일 빌
+</body>
+</html>

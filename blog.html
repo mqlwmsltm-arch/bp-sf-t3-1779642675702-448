@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta name="description" content="마포 셔츠룸 프록시 보안 블로그 – 셔츠 대여와 보안의 모든 팁. 전화 010-6279-0862. 마포 셔츠룸 No.1 정보 블로그.">
+    <meta name="keywords" content="마포 셔츠룸 블로그, 마포 프록시 보안 팁, 셔츠 대여 후기, 마포 보안 셔츠, 셔츠룸 꿀팁, 프록시 보안 꿀팁">
+    <meta rel="canonical" href="https://sf-t3-1779642675702-448.pages.dev/blog">
+    <meta property="og:title" content="마포 셔츠룸 블로그 | 프록시 보안 꿀팁">
+    <meta property="og:description" content="마포 셔츠룸의 모든 것, 여기 블로그에서 확인하세요. 전화 010-6279-0862.">
+    <title>블로그 — 마포 셔츠룸</title>
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; background: #0a0a0a; color: #f0f0f0; }
+        body { font-family: 'Courier New', monospace; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        a { color: #00f0ff; text-decoration: underline wavy #ff00a0; }
+        a:hover { color: #ff00a0; text-decoration: none; background: #222; }
+        img { max-width: 100%; height: auto; display: block; }
+        /* BRUTAL SYSTEM */
+        h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; letter-spacing: 2px; border-left: 6px solid #ff00a0; padding-left: 12px; margin: 1.5rem 0 1rem; }
+        h1 { font-size: 2.8rem; color: #ff00a0; text-shadow: 4px 4px 0 #00f0ff; }
+        h2 { font-size: 2.2rem; color: #00f0ff; text-shadow: 2px 2px 0 #ff00a0; }
+        h3 { font-size: 1.6rem; color: #f0f0f0; }
+        p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+        /* LAYOUT : full bleed, asymmetric */
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        section { position: relative; padding: 3rem 0; border-top: 2px dashed #ff00a0; border-bottom: 2px dashed #00f0ff; }
+        section::before { content: '⚡'; position: absolute; top: -12px; left: 20px; font-size: 2rem; color: #ff00a0; transform: rotate(15deg); }
+        /* NAV PRESENT */
+        nav { background: #111; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; border-bottom: 3px solid #ff00a0; }
+        nav .logo { font-size: 1.8rem; font-weight: bold; color: #00f0ff; text-decoration: none; }
+        nav .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+        nav .nav-links li a { color: #f0f0f0; text-decoration: none; font-weight: bold; padding: 0.3rem 0.6rem; border: 1px solid transparent; transition: 0.2s; }
+        nav .nav-links li a:hover { border-color: #ff00a0; background: #222; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 28px; height: 3px; background: #00f0ff; border-radius: 2px; }
+        .tel-link { font-size: 1.2rem; background: #ff00a0; color: #000; padding: 0.4rem 1rem; border-radius: 0; text-decoration: none; font-weight: bold; border: 2px solid #00f0ff; }
+        .tel-link:hover { background: #00f0ff; color: #000; border-color: #ff00a0; }
+        /* BRUTAL BOX */
+        .brutal-box { background: #1a1a1a; padding: 2rem; border: 3px solid #ff00a0; box-shadow: 8px 8px 0 #00f0ff; margin-bottom: 2rem; }
+        .brutal-box h1 { margin-top: 0; }
+        .brutal-box .meta { font-size: 0.85rem; color: #888; border-bottom: 1px dashed #444; padding-bottom: 0.8rem; margin-bottom: 1.5rem; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .card { background: #151515; padding: 1.5rem; border: 1px solid #333; transition: 0.2s; }
+        .card:hover { border-color: #ff00a0; transform: translate(-2px, -2px); box-shadow: 4px 4px 0 #00f0ff; }
+        /* FOOTER */
+        footer { background: #111; padding: 2rem; margin-top: auto; border-top: 3px solid #00f0ff; text-align: center; }
+        footer p { margin: 0.5rem 0; }
+        footer .tel-link { margin-top: 1rem; display: inline-block; }
+        /* RESPONSIVE 768 */
+        @media (max-width: 768px) {
+            nav .nav-links { display: none; flex-direction: column; width: 100%; padding: 1rem 0; }
+            nav .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .container { padding: 1rem; }
+            .brutal-box { padding: 1.2rem; box-shadow: 4px 4px 0 #00f0ff; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 네비게이션 -->
+<nav>
+    <a href="index.html" class="logo">⬡ 마포셔츠</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="blog.html" style="color: #ff00a0;">블로그</a></li>
+        <li><a href="about.html">소개</a></li>
+        <li><a href="contact.html">문의</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <a href="tel:010-6279-0862" class="tel-link">☎ 010-6279-0862</a>
+</nav>
+
+<!-- 메인 블로그 글 -->
+<main>
+    <section class="container">
+        <article class="brutal-box">
+            <h1>마포 셔츠룸에서 프록시 보안까지?<br>내가 겪은 진짜 썰 푼다</h1>
+            <div class="meta">
+                <span>📅 2025. 3. 26.</span>
+                <span style="margin-left: 1rem;">✍️ aegis-warmer</span>
+                <span style="margin-left: 1rem;">📍 마포구</span>
+            </div>
+
+            <p>야, 나 원래 셔츠 대여 같은 거 전혀 관심 없었어. 그냥 출근할 때 입는 와이셔츠도 지지고 볶고 그냥 입었거든. 근데 어느 날 마포에서 중요한 미팅이 잡혔는데, 옷차림 때문에 망신당할 뻔한 썰이 있어. 진짜임.</p>
+
+            <p>그날 아침, 급하게 옷장을 열었는데 셔츠들이 다 구겨져 있거나 목때가 껴 있는 거야. 완전 패닉. 그래서 급하게 검색하다가 <strong>마포 셔츠룸</strong>이란 곳을 알게 됐어. "프록시 보안"이라는 말이 붙어 있길래 처음엔 보안 업체인 줄 알았어. 그런데 알고 보니 셔츠를 빌려주는데 거기에 보안 솔루션까지 같이 제공하는 하이브리드 서비스더라고. 헐, 요즘엔 이런 게 있구나 싶었지.</p>
+
+            <p>전화를 했어. (010-6279-0862 이 번호임) 받는 분 목소리가 되게 친근하더라. "네, 마포셔츠입니다~" 하면서. 내 상황을 설명했더니 바로 맞춤형으로 추천해주더라고. 셔츠는 무려 3벌이나 들고 왔음. 핏도 내 몸에 딱 맞게 수선된 상태였고, 심지어 와이셔츠 안에 <strong>프록시 태그</strong>라는 게 내장되어 있었어. GPS나 개인정보 노출을 차단해주는 원단 기술이라는데,
+</body>
+</html>
